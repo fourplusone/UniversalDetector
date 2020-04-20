@@ -14,7 +14,7 @@ let package = Package(
             dependencies: ["universalchardet", "kludge"],
             path: ".",
             sources: ["UniversalDetector.m", "WrappedUniversalDetector.cpp"],
-            publicHeadersPath: "."
+            publicHeadersPath: "include"
         ),
         .target(
             name: "kludge", path: "kludge", publicHeadersPath: "."
