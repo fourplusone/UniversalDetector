@@ -16,8 +16,6 @@
 
 - (void)dealloc {
 	FreeUniversalDetector(detectorPtr);
-	[charsetName release];
-	[super dealloc];
 }
 
 - (void)analyzeContentsOfFile:(NSString *)path {
@@ -26,7 +24,6 @@
 	if (data) {
 		[self analyzeBytes:(const char *)[data bytes] length:(int)[data length]];
 	}
-	[data release];
 }
 
 - (void)analyzeData:(NSData *)data {
@@ -35,7 +32,6 @@
 
 - (void)analyzeBytes:(const char *)data length:(int)len {
 	UniversalDetectorHandleData(detectorPtr, data, len);
-	[charsetName release];
 	charsetName=nil;
 }
 

@@ -534,7 +534,7 @@ typedef unsigned long PRUword;
 #endif
 
 #ifdef XP_MAC
-#include "protypes.h"
+// #include "protypes.h"
 #else
 #include "obsolete/protypes.h"
 #endif
