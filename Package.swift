@@ -13,7 +13,8 @@ let package = Package(
             name: "UniversalDetector",
             dependencies: ["universalchardet", "kludge"],
             path: ".",
-            sources: ["UniversalDetector.m", "WrappedUniversalDetector.cpp"]
+            sources: ["UniversalDetector.m", "WrappedUniversalDetector.cpp"],
+            publicHeadersPath: "."
         ),
         .target(
             name: "kludge", path: "kludge", publicHeadersPath: "."
